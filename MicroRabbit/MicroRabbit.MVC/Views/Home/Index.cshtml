@@ -1,0 +1,26 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@using MicroRabbit.MVC.Models;
+@model TransferViewModel
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+<form action="/Home/Transfer" method="post">
+
+    @Html.LabelFor(x => x.FromAccount)
+    @Html.TextBoxFor(x => x.FromAccount)
+    <br />
+    @Html.LabelFor(x => x.ToAccount)
+    @Html.TextBoxFor(x => x.ToAccount)
+    <br />
+    @Html.LabelFor(x => x.TransferAmount)
+    @Html.TextBoxFor(x => x.TransferAmount)
+    <br/>
+    @Html.LabelFor(x => x.TransferNote)
+    @Html.TextBoxFor(x => x.TransferNote)
+
+    <input type="submit" value="Submit" />
+</form>
